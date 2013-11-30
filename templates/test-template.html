@@ -1,0 +1,27 @@
+<div data-role="page" data-theme="e" id="page-question">
+	<div id="testPage" style="display:none;">
+		<div data-role="header">
+			<a href="" data-rel="back" >Назад</a>
+			<h1>{{question}}</h1>
+		</div>
+		<div data-role="content">
+			{{#file}}
+				<div id="popupPhoto">
+					<img src="{{file}}" alt="" />
+				</div>
+			{{/file}}
+			<form  id="list-buttons" data-confirmAnswer="{{confirmAnswer}}">
+        		<fieldset data-role="controlgroup">
+       				<legend>{{question}}</legend>
+       				{{#answer}}
+	        			<input type="radio" name="radio" value="{{.}}" id="radio-{{.}}">
+	        			<label for="radio-{{.}}">{{.}}</label>
+	        		{{/answer}}
+   				 </fieldset>
+			</form>
+			<h4>Сохраненно</h4>
+			<button data-role="button" data-theme="a" id="answer">Ответить</button>
+			<a href="test-template.html?step={{nextStep}}" data-transition="slide" class="next-step" data-role="button" data-theme="e"> Дальше</a>
+		</div>
+	</div>
+</div><!-- /page -->

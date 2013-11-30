@@ -1,0 +1,65 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+body .ui-icon-delete{
+     background-position: -81px 50%;
+}
+body .ui-icon-arrow-r {
+    background-position: -122px 50%;
+}
+#popupPhoto{
+    width:100%;
+    text-align: center;
+}
+#popupPhoto img{
+    width:auto;
+    max-width: 100%;
+    height: auto;
+}
+#themes{
+    display: none;
+}
+.ui-title{
+    white-space : normal !important;
+}
+#descriptionTest p{
+    text-indent: -9999px; 
+}
+#descriptionTest .ui-title{
+     text-indent: -9999px; 
+}
+#descriptionTest.show p,
+#descriptionTest.show h1{
+    text-indent: 0;
+
+}
+​body .ui-btn-inner,
+body .ui-li .ui-btn-text a.ui-link-inherit{
+    white-space : normal;
+}​
+.ui-loader.ui-body-e { left:-9999px;}
+.ui-icon-check{
+    background-position: -121px 50%;
+}
+.hide{
+    display: none !important;
+}
+body .ui-icon-radio-on{
+    background-position: -723px 50%;
+}
+body .ui-icon-radio-off{
+    background-position: -763px 50%;
+}
+body form .ui-btn-inner .ui-btn-inner .ui-btn-text + .ui-icon{
+    display: none;
+}
+h4,h2,h3{
+    text-align: center;
+}
+body .ui-icon-home{
+     background-position: -643px 50%;
+}
+body #result{
+
+}
