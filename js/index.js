@@ -141,15 +141,21 @@ var app = {
 		var confirmAnswer = form.attr('data-confirmAnswer');
 		var answer;
 		form.find('[type=radio]').each(function(){
-			if( $(this).is(':checked') )
+			if( $(this).is(':checked') ){
 				answer = $(this).val();
+			}
+				
 		});
 		if( !answer ) return;
-
+		console.log(answer)
+		this.allQuestions[app.step].userAnswer = null;
 		this.allQuestions[app.step].userAnswer = answer;
+		
 		if( answer === this.allQuestions[app.step].confirmAnswer ){
 			this.allQuestions[app.step].success = true;
-		}		
+		}	
+		alert(this.allQuestions[app.step].userAnswer);
+		// console.log(this.allQuestions[app.step].userAnswer);
 	},
 	createResult : function(){
 		var answers = this.getConfirmAnswers();
@@ -161,10 +167,7 @@ var app = {
 			rating : rating
 		}
 		// render template
-		console.log(html)
-		console.log(view)
 		var output = this.renderTemplate(html, view, '');
-		console.log(output);
 		$('#result').replaceWith(output).show();
 
 	},
@@ -183,7 +186,7 @@ var app = {
 		return Math.floor(procent);
 	}
 };
-$(document).on('mobileinit', function(){
+$(document).on('ready mobileinit', function(){
 	var $document = $(this);
 
 	$document.on('pagechange', function(e, data){
@@ -253,14 +256,11 @@ var router = new $.mobile.Router({
 		},
 		Result : function(){ // templates/result.html handler
 			app.createResult();
-			console.log(13123)
 		}
 	}, 
 	{ 
 		ajaxApp: true,
 		defaultHandler: function(type, ui, page) {
-			console.log("Default handler called due to unknown route (" 
-			  + type + ", " + ui + ", " + page + ")");
 		},
 		defaultHandlerEvents: "s"
 	}
