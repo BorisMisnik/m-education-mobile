@@ -1,11 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="m-educator.com" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>m-educator</name>
-    <description>
-        m-educator
-    </description>
-    <content src="index.html" />
-    <access origin="*" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
+<widget 
+		id="m-educator.com"
+		version="0.0.1" 
+		xmlns="http://www.w3.org/ns/widgets"
+	 	xmlns:gap = "http://phonegap.com/ns/1.0"
+		xmlns:cdv="http://cordova.apache.org/ns/1.0"
+>
+
+	<gap:platform name="android" />
+
+	<name>m-educator</name>
+	<description>
+		m-educator
+	</description>
+	<content src="index.html" />
+	<access origin="*" />
+
+	<preference name="fullscreen" value="true" />
+	<preference name="webviewbounce" value="true" />
+
+	<icon src="res/icon/android/m-educator_36.png" />		
+	<icon src="./res/icon/android/m-educator_36.png" width="36" height="36" gap:density="ldpi" gap:platform="android" />
+	<icon src="./res/icon/android/m-educator_48.png" width="48" height="48" gap:density="mdpi" gap:platform="android" />
+	<icon src="./res/icon/android/m-educator_72.png" width="72" height="72" gap:density="hdpi" gap:platform="android" />
+	<icon src="./res/icon/android/m-educator_96.png" width="96" height="96" gap:density="xhdpi" gap:platform="android" />
+
 </widget>
