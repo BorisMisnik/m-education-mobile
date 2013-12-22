@@ -154,7 +154,7 @@ var app = {
 		if( answer === this.allQuestions[app.step].confirmAnswer ){
 			this.allQuestions[app.step].success = true;
 		}	
-		alert(this.allQuestions[app.step].userAnswer);
+		// alert(this.allQuestions[app.step].userAnswer);
 		// console.log(this.allQuestions[app.step].userAnswer);
 	},
 	createResult : function(){
